@@ -7,10 +7,8 @@
 header {
     position:relative;
     height:80%;
-    // width:100%;
+    z-index: -99;
 
-    // @include bgImgCover-mixin("http://lorempixel.com/1200/333/sports");
-    // @include bgImgCover-mixin("../img/site/DClifton_background_MED.jpg");
     @include bgImgCover-mixin("../img/site/DClifton_background_LO.jpg");
 
 
@@ -20,12 +18,13 @@ header {
         max-height: 200px;
     }
 
-    z-index: -100;
 
-// THIS PLACES THE TOPBAR NAV OVER THE HEADER BG IMAGE.. 
-                        margin-bottom:-45px;
-                        // padding-top:275px
-  }
+    // THIS PLACES THE TOPBAR NAV OVER THE HEADER BG IMAGE.. 
+    margin-bottom:-45px;
+}
+
+
+
 
 // THIS RESTORES THE BOTTOM-MARGIN WHEN THE TOPBAR NAV GOES STICKY.. 
 .f-topbar-fixed{
@@ -35,21 +34,19 @@ header {
 }
 
 
+
+
+
+
+
+
+
 .mainContent{
-    margin:2em auto;
-    // text-align: center;
-    
+//     // margin:2em auto;
     img {
-        margin-bottom:1em;
+        // margin-bottom:1em;
     }
-
-
-}
-
-
-
-
-
+}   
 
 
 
@@ -57,54 +54,44 @@ header {
 
 
 #navLogo{
-    // margin-top:2px;
-    // height:40px;
-    margin-top:1px;
-    height:45px;
+    opacity:0;
+    @include animation(0, 2s, fadeOut, 1);
 
-    display:none;
-    // float:right;
-    position:fixed;
-}
+    height:35px;
+    width:155px;
 
-nav ul li a:link {
-    // text-transform:uppercase;
-}
-
-.nav-active a:link{
-    color:$dc-highlight-gold;
-}
-
-.top-bar-section ul li {
-    background-color:transparent;
+    margin-top:-3px;
+    position:absolute; //top:-3px;
 }
 
 
-/* 
-#navBg {
-    position:absolute; top:0; 
-    height:100%; width:100%;
-    // left:-150%;  width:300%; 
-    background-color:#222;
-    @include opacity-mixin(0.7);
-    z-index: -1;
-}
- */
+
+
+
 
 
 
 
 // CENTERS THE NAV ITEMS
 nav.top-bar {
-    text-align:center;
-    background-color:transparent;
-
+    text-align:center;// CENTERS THE NAV ITEMS
+    background-color:transparent;// REMOVES BG COLOR
 }
 section.top-bar-section {
-    display: inline-block;
-    // margin-left:-12%;
-    background-color:transparent;
+    display: inline-block;// CENTERS THE NAV ITEMS
+    // background-color:transparent; // REMOVES BG COLOR
+    li {
+        background-color:transparent; // REMOVES BG COLOR
+    }
 }
+
+
+
+
+.top-bar-section ul li {
+    background:none;
+}
+
 
 
 
@@ -117,7 +104,13 @@ section.top-bar-section {
          top:0em;
     }
 }
-@include keyframe(bgcolor) {
+@include keyframe(fadeOut) {
+  0% {  opacity: 1; 
+    }
+  100% { opacity: 0; 
+    }
+}
+@include keyframe(bgColor) {
   0% {  
         background-color:$topbar-bg;
     }
@@ -126,27 +119,21 @@ section.top-bar-section {
     }
 }
 
+
+
+
 .f-topbar-fixed{
     .sticky{
-        @include animation(0, 1s, bgcolor, 1);
+        @include animation(0, 1s, bgColor, 1);
         background-color:$oil;
-    }
-    .top-bar {   
-        // position:relative; top:0;
-    }
-    #navBg {
-        // @include opacity-mixin(0);
     }
     #navLogo{
         display:block;
         @include animation(0, 1s, fadeIn, 1);
+        opacity:1;
     }
-
 }
 
-// .top-bar-section ul li {
-//     background:none;
-// }
 
 
 
@@ -157,11 +144,44 @@ section.top-bar-section {
 
 
 
-.focusBlock{
-    background-color:$dc-light-grey;;
-    // border:1px solid $dc-warm-grey;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome-msg {
+    // height:5em;
+    margin:2.5em auto;
+    // padding:2em;
+    // background-color:$dc-light-grey;
+    
+    // @include border-radius(1em);
+
+    max-width:400px;
+
+    p{
+        margin:0; padding:0;
+        text-align: center;
+    }
 }
-
 
 
 
@@ -170,7 +190,7 @@ section.top-bar-section {
 
 footer {
     margin-top:3em;
-    
+    text-align: center;
 
     .row{
         padding-top:1em;
@@ -179,6 +199,20 @@ footer {
 
 
 }
+
+
+
+
+
+
+.focusBlock{
+    background-color:$dc-light-grey;
+    // border:1px solid $dc-warm-grey;
+}
+
+
+
+
 
 
 

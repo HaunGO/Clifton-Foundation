@@ -5584,13 +5584,15 @@ th.hide-for-touch {
  Typography: Defined Font Mixins
 ------------------------------------------------------------------------ */
 /* heading */
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   color: #877f7d;
   text-align: center; }
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase; }
+p {
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #877f7d;
+  margin: 0.5em 0; }
 
 h3 {
   font-size: 1.2em;
@@ -5602,6 +5604,9 @@ p a:link, p a:visited {
 p a:hover, p a:active {
   color: #d7771a;
   text-decoration: underline; }
+
+.nav-active a:link {
+  color: #d7771a; }
 
 /* _mixins.scss */
 /* Box Models */
@@ -5635,17 +5640,28 @@ p a:hover, p a:active {
 /* Fancy Borders */
 /* Gradients */
 /* _mixins-bdh.scss */
+/* 
+.button {
+  @include border-radius(5px);
+}
+.submit-button {
+  @include border-top-radius(10px);
+  @include border-right-radius(8px);
+  @include border-bottom-radius(10px);
+  @include border-left-radius (6px);
+}
+ */
 /* _base.scss */
 /* Base styles shared across views */
 header {
   position: relative;
   height: 80%;
+  z-index: -99;
   background: url("../img/site/DClifton_background_LO.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  z-index: -100;
   margin-bottom: -45px; }
   header #dc-logo {
     position: absolute;
@@ -5660,40 +5676,40 @@ header {
 .f-topbar-fixed header {
   margin-bottom: 0px; }
 
-.mainContent {
-  margin: 2em auto; }
-  .mainContent img {
-    margin-bottom: 1em; }
-
 #navLogo {
-  margin-top: 1px;
-  height: 45px;
-  display: none;
-  position: fixed; }
+  opacity: 0;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 2s;
+  -moz-animation-name: fadeOut;
+  -moz-animation-iteration-count: 1;
+  -o-animation-delay: 0;
+  -o-animation-duration: 2s;
+  -o-animation-name: fadeOut;
+  -o-animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-name: fadeOut;
+  animation-animation-iteration-count: 1;
+  height: 35px;
+  width: 155px;
+  margin-top: -3px;
+  position: absolute; }
 
-.nav-active a:link {
-  color: #d7771a; }
-
-.top-bar-section ul li {
-  background-color: transparent; }
-
-/* 
-#navBg {
-    position:absolute; top:0; 
-    height:100%; width:100%;
-    // left:-150%;  width:300%; 
-    background-color:#222;
-    @include opacity-mixin(0.7);
-    z-index: -1;
-}
- */
 nav.top-bar {
   text-align: center;
   background-color: transparent; }
 
 section.top-bar-section {
-  display: inline-block;
-  background-color: transparent; }
+  display: inline-block; }
+  section.top-bar-section li {
+    background-color: transparent; }
+
+.top-bar-section ul li {
+  background: none; }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -5731,28 +5747,56 @@ section.top-bar-section {
     opacity: 1;
     top: 0em; } }
 
-@-webkit-keyframes bgcolor {
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes bgColor {
   0% {
     background-color: rgba(0, 0, 0, 0.7); }
 
   100% {
     background-color: #333333; } }
 
-@-moz-keyframes bgcolor {
+@-moz-keyframes bgColor {
   0% {
     background-color: rgba(0, 0, 0, 0.7); }
 
   100% {
     background-color: #333333; } }
 
-@-o-keyframes bgcolor {
+@-o-keyframes bgColor {
   0% {
     background-color: rgba(0, 0, 0, 0.7); }
 
   100% {
     background-color: #333333; } }
 
-@keyframes bgcolor {
+@keyframes bgColor {
   0% {
     background-color: rgba(0, 0, 0, 0.7); }
 
@@ -5762,19 +5806,19 @@ section.top-bar-section {
 .f-topbar-fixed .sticky {
   -webkit-animation-delay: 0;
   -webkit-animation-duration: 1s;
-  -webkit-animation-name: bgcolor;
+  -webkit-animation-name: bgColor;
   -webkit-animation-iteration-count: 1;
   -moz-animation-delay: 0;
   -moz-animation-duration: 1s;
-  -moz-animation-name: bgcolor;
+  -moz-animation-name: bgColor;
   -moz-animation-iteration-count: 1;
   -o-animation-delay: 0;
   -o-animation-duration: 1s;
-  -o-animation-name: bgcolor;
+  -o-animation-name: bgColor;
   -o-animation-iteration-count: 1;
   animation-delay: 0;
   animation-duration: 1s;
-  animation-name: bgcolor;
+  animation-name: bgColor;
   animation-animation-iteration-count: 1;
   background-color: #333333; }
 .f-topbar-fixed #navLogo {
@@ -5794,13 +5838,23 @@ section.top-bar-section {
   animation-delay: 0;
   animation-duration: 1s;
   animation-name: fadeIn;
-  animation-animation-iteration-count: 1; }
+  animation-animation-iteration-count: 1;
+  opacity: 1; }
 
-.focusBlock {
-  background-color: #efefef; }
+.welcome-msg {
+  margin: 2.5em auto;
+  max-width: 400px; }
+  .welcome-msg p {
+    margin: 0;
+    padding: 0;
+    text-align: center; }
 
 footer {
-  margin-top: 3em; }
+  margin-top: 3em;
+  text-align: center; }
   footer .row {
     padding-top: 1em;
     border-top: 1px solid #877f7d; }
+
+.focusBlock {
+  background-color: #efefef; }
