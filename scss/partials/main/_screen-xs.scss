@@ -1,0 +1,14 @@
+/* _styleguide-screen-xs.scss */
+
+/* Styles for X-Small View @min-width: 28.1em (480px, < iPhone5, Landscape, e.g.) */
+
+/* ---------------------------------------------------------------------
+ Test Module 
+------------------------------------------------------------------------ */
+.mod-viewport {
+    background: $yellow;
+}
+
+.mod-viewport:after {
+	content: 'xs';
+}

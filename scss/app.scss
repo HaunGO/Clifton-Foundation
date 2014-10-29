@@ -1,0 +1,48 @@
+// @import "_settings";
+
+
+
+
+
+// /* ---------------------------------------------------------------------
+//  CUSTOM SETTING Foundation5 topbar : 
+// ------------------------------------------------------------------------ */
+$topbar-link-text-transform: uppercase;
+$topbar-bg:rgba(0,0,0,0.7); // $topbar-bg: $topbar-bg-color;
+$topbar-link-bg:transparent;
+$topbar-link-bg-hover: $topbar-bg;
+$topbar-link-bg-color-hover: $topbar-bg;
+$topbar-link-bg-active: $topbar-bg;
+$topbar-link-padding: 10px;
+
+
+// /* ---------------------------------------------------------------------
+//  IMPORT Foundation5 
+//  (not sure why this MUST come after the custom edits above.)
+// ------------------------------------------------------------------------ */
+@import "foundation";
+
+
+// /* ---------------------------------------------------------------------
+//  SCSSS Partial Imports
+// ------------------------------------------------------------------------ */
+@import "partials/shared/_palette";
+@import "partials/shared/_typography";
+
+
+// /* ---------------------------------------------------------------------
+//  SCSSS Mixins
+// ------------------------------------------------------------------------ */
+@import "partials/shared/_mixins";
+@import "partials/shared/_mixins-bdh";
+
+
+
+@import "partials/main/_base";
+
+
+
+
+
+
+

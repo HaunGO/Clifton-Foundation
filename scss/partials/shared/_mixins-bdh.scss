@@ -1,0 +1,62 @@
+/* _mixins-bdh.scss */
+
+
+
+@mixin center-mixin {
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+@mixin bgImgCover-mixin($img) {
+    background: url($img) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+@mixin alpha-attribute-mixin($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+
+@mixin opacity-mixin($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin rotate-mixin($ro) {
+    -ms-transform:rotate(-$ro); /* IE 9 */
+    -moz-transform:rotate($ro); /* Firefox */
+    -webkit-transform:rotate($ro); /* Safari and Chrome */
+    -o-transform:rotate($ro); /* Opera */
+}
+
+
+@mixin noSelect-mixin() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor:default;
+}
+
+
+
+
+

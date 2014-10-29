@@ -1,0 +1,14 @@
+/* _styleguide-screen-md.scss */
+
+/* Styles for Medium View @min-width: 43em (iPad Mini, iPad, Nexus 4, Portrait, e.g.) */
+
+/* ---------------------------------------------------------------------
+ Test Module 
+------------------------------------------------------------------------ */
+.mod-viewport {
+    background: $blue;
+}
+
+.mod-viewport:after {
+	content: 'md';
+}

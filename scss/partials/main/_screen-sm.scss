@@ -1,0 +1,14 @@
+/* _styleguide-screen-sm.scss */
+
+/* Styles for Small View @min-width: 34em (568px, iPhone5, Nexus 7, Landscape, e.g.) */
+
+/* ---------------------------------------------------------------------
+ Test Module 
+------------------------------------------------------------------------ */
+.mod-viewport {
+    background: $green;
+}
+
+.mod-viewport:after { 
+	content: 'sm';
+}

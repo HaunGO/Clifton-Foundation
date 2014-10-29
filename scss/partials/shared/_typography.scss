@@ -1,0 +1,64 @@
+/* _typography.scss */
+
+/* ---------------------------------------------------------------------
+ Typography: Variables
+------------------------------------------------------------------------ */
+/* Helvetica Neue Roman */
+// $helvetica: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+$myriadPro: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+
+
+ 
+/* ---------------------------------------------------------------------
+ Typography: Defined Font Mixins
+------------------------------------------------------------------------ */
+/* heading */
+// @mixin heading-main ($size: 2.5em, $height: 1.5em, $alignment: left, $weight: normal, $font: $myriadPro) {
+//     font-size: $size;   
+//     line-height: $height;
+//     text-align: $alignment;
+//     font-weight: $weight;
+//     font-family: $font;
+// }
+
+// @mixin heading-sub ($size: 2em, $height: 1.5em, $alignment: left, $weight: normal, $font: $myriadPro) {
+//     font-size: $size;   
+//     line-height: $height;
+//     text-align: $alignment;
+//     font-weight: $weight;
+//     font-family: $font;
+// }
+
+
+h1,h2,h3,h4,h5,h6, p {
+    font-family: $myriadPro;
+    color:$dc-warm-grey;
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    text-transform:uppercase;
+    // font-size:1em
+}
+h3{
+	font-size:1.2em;
+    text-transform:uppercase;
+}
+h4,h5,h6{
+}
+
+
+
+
+
+p a:link, p a:visited {
+	color:$dc-highlight-gold
+}
+
+p a:hover, p a:active {
+	color:$dc-highlight-gold;
+	text-decoration:underline;
+}
+
+
+

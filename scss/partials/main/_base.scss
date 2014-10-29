@@ -1,0 +1,200 @@
+/* _base.scss */
+/* Base styles shared across views */
+
+
+
+
+header {
+    position:relative;
+    height:80%;
+    // width:100%;
+
+    // @include bgImgCover-mixin("http://lorempixel.com/1200/333/sports");
+    // @include bgImgCover-mixin("../img/site/DClifton_background_MED.jpg");
+    @include bgImgCover-mixin("../img/site/DClifton_background_LO.jpg");
+
+
+    #dc-logo {
+        @include center-mixin;
+        padding:0 10px;
+        max-height: 200px;
+    }
+
+    z-index: -100;
+
+// THIS PLACES THE TOPBAR NAV OVER THE HEADER BG IMAGE.. 
+                        margin-bottom:-45px;
+                        // padding-top:275px
+  }
+
+// THIS RESTORES THE BOTTOM-MARGIN WHEN THE TOPBAR NAV GOES STICKY.. 
+.f-topbar-fixed{
+    header{
+        margin-bottom:0px;
+    }
+}
+
+
+.mainContent{
+    margin:2em auto;
+    // text-align: center;
+    
+    img {
+        margin-bottom:1em;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#navLogo{
+    // margin-top:2px;
+    // height:40px;
+    margin-top:1px;
+    height:45px;
+
+    display:none;
+    // float:right;
+    position:fixed;
+}
+
+nav ul li a:link {
+    // text-transform:uppercase;
+}
+
+.nav-active a:link{
+    color:$dc-highlight-gold;
+}
+
+.top-bar-section ul li {
+    background-color:transparent;
+}
+
+
+/* 
+#navBg {
+    position:absolute; top:0; 
+    height:100%; width:100%;
+    // left:-150%;  width:300%; 
+    background-color:#222;
+    @include opacity-mixin(0.7);
+    z-index: -1;
+}
+ */
+
+
+
+
+// CENTERS THE NAV ITEMS
+nav.top-bar {
+    text-align:center;
+    background-color:transparent;
+
+}
+section.top-bar-section {
+    display: inline-block;
+    // margin-left:-12%;
+    background-color:transparent;
+}
+
+
+
+
+@include keyframe(fadeIn) {
+  0% {  opacity: 0; 
+        top:-0.5em
+    }
+  100% { opacity: 1; 
+         top:0em;
+    }
+}
+@include keyframe(bgcolor) {
+  0% {  
+        background-color:$topbar-bg;
+    }
+  100% { 
+        background-color:$oil;
+    }
+}
+
+.f-topbar-fixed{
+    .sticky{
+        @include animation(0, 1s, bgcolor, 1);
+        background-color:$oil;
+    }
+    .top-bar {   
+        // position:relative; top:0;
+    }
+    #navBg {
+        // @include opacity-mixin(0);
+    }
+    #navLogo{
+        display:block;
+        @include animation(0, 1s, fadeIn, 1);
+    }
+
+}
+
+// .top-bar-section ul li {
+//     background:none;
+// }
+
+
+
+
+
+
+
+
+
+
+.focusBlock{
+    background-color:$dc-light-grey;;
+    // border:1px solid $dc-warm-grey;
+}
+
+
+
+
+
+
+
+footer {
+    margin-top:3em;
+    
+
+    .row{
+        padding-top:1em;
+        border-top:1px solid $dc-warm-grey;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

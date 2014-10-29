@@ -1,0 +1,86 @@
+
+
+
+/* screen-main.scss */
+
+
+
+
+/* ---------------------------------------------------------------------
+ SCSSS Partial Imports
+------------------------------------------------------------------------ */
+@import "partials/shared/_normalize";
+@import "partials/shared/_palette";
+
+/* ---------------------------------------------------------------------
+ SCSSS Mixins
+------------------------------------------------------------------------ */
+@import "partials/shared/_typography";
+@import "partials/shared/_mixins";
+
+/* Shared */
+@import "partials/main/_base";
+
+
+body {
+	// background-color: red;
+}
+
+
+/* XX-Small View (320px, iPhone, Portrait, e.g.) */
+@media screen and ( max-width: 28em ) {
+	
+	@import "partials/main/_screen-xxs";
+
+}
+
+/* X-Small View (480px, < iPhone5, Landscape, e.g.) */
+@media screen and ( min-width: 28.1em ) {
+	
+	@import "partials/main/_screen-xs";
+
+}
+
+/* Small View (568px, iPhone5, Landscape, Nexus 7, e.g.) */
+@media screen and ( min-width: 34em ) {
+
+	@import "partials/main/_screen-sm";
+	
+}
+
+/* Medium View (700px, iPad Mini, iPad, Nexus 4, Portrait, e.g.) */
+@media screen and ( min-width: 43em ) {
+
+	@import "partials/main/_screen-md";
+	
+}
+
+/* Large View (900px, Desktop, Landscape, e.g.) */
+@media screen and ( min-width: 52em ) {
+
+	@import "partials/main/_screen-lg";
+	
+}
+
+/* X-Large View (1020px, Desktop, iPad Mini, iPad, Nexus 10, Landscape, e.g.) */
+@media screen and ( min-width: 64em ) {
+
+	@import "partials/main/_screen-xl";
+	
+}
+
+/* XX-Large View (1500px, Desktop) */
+@media screen and ( min-width: 81.25em ) {
+
+	@import "partials/main/_screen-xxl";
+	
+}
+
+
+
+
+
+
+
+
+

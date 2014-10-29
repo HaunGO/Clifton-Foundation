@@ -1,0 +1,1 @@
+$(document).foundation(),$(function(){var e=$(".mainContent h3").parent();e.bind("mouseenter focus mouseleave",function(e){switch(e.type){case"mouseenter":$(this).addClass("focusBlock");break;case"mouseleave":$(this).removeClass("focusBlock")}})});

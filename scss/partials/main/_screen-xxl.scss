@@ -1,0 +1,14 @@
+/* _styleguide-screen-xl.scss */
+
+/* Styles for X-Large View @min-width: 60em (1024px, Desktop, iPad Mini, iPad, Nexus 10, Landscape, e.g.) */
+
+/* ---------------------------------------------------------------------
+ Test Module 
+------------------------------------------------------------------------ */
+.mod-viewport {
+    background: $red;
+}
+
+.mod-viewport:after {
+	content: 'xxl';
+}
