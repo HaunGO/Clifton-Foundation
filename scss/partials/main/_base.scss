@@ -55,7 +55,7 @@ header {
 
 #navLogo{
     opacity:0;
-    @include animation(0, 2s, fadeOut, 1);
+    @include animation(0, 0.5s, fadeOut, 1);
 
     height:35px;
     width:155px;
@@ -79,7 +79,6 @@ nav.top-bar {
 }
 section.top-bar-section {
     display: inline-block;// CENTERS THE NAV ITEMS
-    // background-color:transparent; // REMOVES BG COLOR
     li {
         background-color:transparent; // REMOVES BG COLOR
     }
@@ -128,7 +127,7 @@ section.top-bar-section {
         background-color:$oil;
     }
     #navLogo{
-        display:block;
+        // display:block;
         @include animation(0, 1s, fadeIn, 1);
         opacity:1;
     }
@@ -176,11 +175,17 @@ section.top-bar-section {
     // @include border-radius(1em);
 
     max-width:400px;
+    
 
+    h2{
+        text-align: center;
+    }
     p{
         margin:0; padding:0;
         text-align: center;
     }
+
+
 }
 
 

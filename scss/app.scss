@@ -8,15 +8,33 @@
 //  CUSTOM SETTING Foundation5 topbar : 
 // ------------------------------------------------------------------------ */
 							$topbar-link-text-transform: uppercase;
-							$topbar-bg:rgba(0,0,0,0.7); // $topbar-bg: $topbar-bg-color;
+							$topbar-bg:rgba(0,0,0,0.5); // $topbar-bg: $topbar-bg-color;
 							$topbar-link-bg:transparent;
 							$topbar-link-bg-hover: $topbar-bg;
 							$topbar-link-bg-color-hover: $topbar-bg;
 							$topbar-link-bg-active: $topbar-bg;
 
-							$topbar-link-padding: 10px;
+							// $topbar-link-padding: 10px;
 
 
+
+
+// We use these as default colors throughout
+$primary-color: #d7771a;
+// $secondary-color: #e7e7e7;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+
+
+// We use these to control various global styles
+// $body-bg: $white;
+// $body-font-color: $jet;
+// $body-font-family: $font-family-sans-serif;
+// $body-font-weight: $font-weight-normal;
+// $body-font-style: normal;
 
 
 
